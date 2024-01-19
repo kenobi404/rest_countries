@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Filter from '../components/Filter';
 import {Link} from 'react-router-dom'
+import countriesData from '../../data.json'
 
 import ReactPaginate from 'react-paginate';
 import { useLoaderData } from 'react-router-dom';
@@ -102,7 +103,6 @@ export const Countries = () => {
 }
 
 
-export const countriesLoaders = async (req) => {
-    const res = await fetch('../../data.json')
-    return res.json()
+export const countriesLoaders = async () => {
+    return countriesData;
   }

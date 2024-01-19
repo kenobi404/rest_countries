@@ -1,7 +1,7 @@
 import React from 'react'
 import { useLoaderData ,Link } from 'react-router-dom'
 import { IoMdArrowRoundBack } from "react-icons/io";
-import data from '../../data.json'
+import countriesData from '../../data.json'
 
 
 
@@ -16,7 +16,7 @@ const Country = () => {
 } = useLoaderData(); 
 
 const findCountry = (code) => {
-  const result = data.find(country=> country.alpha3Code === code);
+  const result = countriesData.find(country=> country.alpha3Code === code);
   return result.name;
 }
 
@@ -92,11 +92,9 @@ export default Country
 
 export const countryLoader = async({params}) => {
   const {country : code} = params
-  const res = await fetch('../../data.json')
-  const data = await res.json();
+ 
 
-
-  const countryData =  data.find((country) => country.alpha3Code==code)
+  const countryData =  countriesData.find((country) => country.alpha3Code==code)
   
   if(countryData) return countryData
 

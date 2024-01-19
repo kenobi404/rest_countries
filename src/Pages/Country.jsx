@@ -79,7 +79,7 @@ const findCountry = (code) => {
         {borders && <div className="border_countries">
             <h3>Border Countries :</h3>
             <div>
-              { borders.map(country => <Link to={`/${country}`} key={country}className='flat_pill'>{findCountry(country)}</Link>)}
+              { borders.map(country => <Link to={`/country/${country}`} key={country}className='flat_pill'>{findCountry(country)}</Link>)}
             </div>
           </div>}
       </div>
@@ -91,7 +91,7 @@ const findCountry = (code) => {
 export default Country
 
 export const countryLoader = async({params}) => {
-  const {country : code} = params
+  const {code} = params
  
 
   const countryData =  countriesData.find((country) => country.alpha3Code==code)

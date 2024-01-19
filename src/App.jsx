@@ -14,7 +14,7 @@ const router = createBrowserRouter(
       element={<Countries />} 
       loader={countriesLoaders}
       />
-      <Route path="/:country" 
+      <Route path="/country/:code" 
       element={<Country />} 
       loader={countryLoader}
       errorElement={<h1>No country exists</h1>}/>

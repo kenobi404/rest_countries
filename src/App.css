@@ -332,11 +332,14 @@ header {
     width: 100%;
   }
 
+  
+
   .country_wrapper .flag img{
     max-width: 100%;
   }
   .country_wrapper .details{
     margin-top: 1rem;
+    width: 100%;
    
   }
 

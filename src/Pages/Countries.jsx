@@ -64,7 +64,7 @@ export const Countries = () => {
         <div className="countries" ref={ref} >
             
             {content??currentItems.map(country => (
-                <Link to={country.alpha3Code} key={country.alpha3Code}>
+                <Link to={`country/${country.alpha3Code}`} key={country.alpha3Code}>
                 <div className="country" >
                     <div className="country_image">
                         <img src={country.flags.svg} alt="country_flag" />
